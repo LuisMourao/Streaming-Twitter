@@ -16,13 +16,13 @@ from wordcloud import WordCloud #Responsável pela formatação do mapa de palav
 import matplotlib.pyplot as plt #Usada para plotar o mapa
 import re #Retirar links 
 
-Consumer_Key = 'eXxQB87RKtRyV6u4UOS9byFpM' 
+Consumer_Key = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' 
 
-Consumer_Secret = 'p6cav59spm3CKUNFJCUbrbcSJg0PK0EeYTjhQViRjnzswwJYsN'
+Consumer_Secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-Access_Token = '992218255375953922-kjB543QT8tDKhgTmNlHHpOx1NxMqs06'
+Access_Token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-AccessToken_Secret = 'CKAX7SMhSOZYdMPAuEGtik2XUfjEdtf3ayuk3Vebqyw5X'
+AccessToken_Secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 consumer = oauth2.Consumer(Consumer_Key,Consumer_Secret)
 
@@ -40,7 +40,7 @@ pattern = r"http\S+"#utilizada para retirar os links
 # loop para exibir e salvar em lista todos os tweets em um espaço de tempo
 
 for j in range(0,40): #numero de loops até terminar a pesquisa
-    request = cliente.request('https://api.twitter.com/1.1/search/tweets.json?q=bolsonaro&lang=pt&count=20') #20 tweets por requisição
+    request = cliente.request('https://api.twitter.com/1.1/search/tweets.json?q=bolsonaro&lang=pt&count=15') #15 tweets por requisição
     requestJ = json.loads(request[1].decode())
     time.sleep(0.5)
     if comp != requestJ['statuses'][0]['text']:
