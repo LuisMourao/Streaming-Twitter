@@ -28,6 +28,7 @@ object TwitterEleicao {
     filters(1) = "ciro"
     filters(2) = "marina"
     filters(3) = "alckmin"
+    filters(4) = "lula"
     
     // Cria a DStream do Twitter using o streaming context
     val tweets = TwitterUtils.createStream(ssc, None, filters).filter(_.getLang == "pt")
